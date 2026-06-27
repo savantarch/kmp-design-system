@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/xml_fragment"
+        android:icon="@drawable/ic_tab_xml"
+        android:title="XML" />
+    <item
+        android:id="@+id/compose_fragment"
+        android:icon="@drawable/ic_tab_compose"
+        android:title="Compose" />
+    <item
+        android:id="@+id/cmp_fragment"
+        android:icon="@drawable/ic_tab_cmp"
+        android:title="CMP" />
+</menu>

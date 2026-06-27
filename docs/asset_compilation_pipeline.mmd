@@ -1,0 +1,4 @@
+graph TD
+    D["Assets.xcassets"] -->|Compiled via actool| E["Assets.car"]
+    F["Info.plist / en.lproj"]
+    F & E -->|Copied via Xcode Post - Build| J["design-system.bundle"]

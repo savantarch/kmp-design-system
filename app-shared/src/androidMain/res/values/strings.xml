@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appTitle">KMP Design System</string>
+    <string name="welcomeMsg">Global Theme</string>
+    <string name="welcomeEmeraldMsg">Emerald Theme</string>
+    <string name="descriptionMsg">A cross-platform design system built with Kotlin Multiplatform.</string>
+    <string name="btnExplore">Explore</string>
+    <string name="welcomeUser">Welcome back, %1$s!</string>
+</resources>

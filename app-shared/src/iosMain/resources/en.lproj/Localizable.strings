@@ -1,0 +1,6 @@
+"appTitle" = "KMP Design System";
+"welcomeMsg" = "Global Theme";
+"welcomeEmeraldMsg" = "Emerald Theme";
+"descriptionMsg" = "A cross-platform design system built with Kotlin Multiplatform.";
+"btnExplore" = "Explore";
+"welcomeUser" = "Welcome back, %@!";

@@ -1,0 +1,3 @@
+graph TD
+    A["commonMain"] -->|AppStrings / AppColors / AppDimensions / AppImages| B["androidMain & iosMain"]
+    B -->|Resolves Natively from colocated Resources| C["design-system.bundle/ (iOS) | res/ (Android)"]

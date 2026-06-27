@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App.Global" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple1</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/purpleLightContainer</item>
+        <item name="colorOnPrimaryContainer">@color/purpleLightOnContainer</item>
+        <item name="colorPrimaryInverse">@color/purplePastel</item>
+        <item name="colorSecondary">@color/teal1</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/greyPurpleLight</item>
+        <item name="colorOnSecondaryContainer">@color/greyPurpleDark</item>
+        <item name="colorTertiary">@color/roseDeep</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/roseLight</item>
+        <item name="colorOnTertiaryContainer">@color/roseDark</item>
+        <item name="android:colorBackground">@color/greyLight</item>
+        <item name="colorOnBackground">@color/greyVeryDark</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/charcoal</item>
+        <item name="colorSurfaceVariant">@color/greyBlueLight</item>
+        <item name="colorOnSurfaceVariant">@color/greyBlueDark</item>
+        <item name="colorSurfaceInverse">@color/greyCharcoal</item>
+        <item name="colorOnSurfaceInverse">@color/greyWhite</item>
+        <item name="colorError">@color/redDark</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/redLight</item>
+        <item name="colorOnErrorContainer">@color/redVeryDark</item>
+        <item name="colorOutline">@color/greyMedium</item>
+        <item name="colorOutlineVariant">@color/greyBlueMedium</item>
+        <item name="warning">@color/orangeDark</item>
+        <item name="promoBrand">@color/orangeDark</item>
+        <item name="statusPending">@color/yellow</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.Global.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.Global.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.App.Global.Large</item>
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.App.Global.DisplayLarge</item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.App.Global.DisplayMedium
+        </item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.App.Global.DisplaySmall</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.App.Global.HeadlineLarge
+        </item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.App.Global.HeadlineMedium
+        </item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.App.Global.HeadlineSmall
+        </item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.App.Global.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.App.Global.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.App.Global.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.App.Global.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.App.Global.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.App.Global.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.App.Global.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.App.Global.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.App.Global.LabelSmall</item>
+        <item name="appTitle">@string/appTitle</item>
+        <item name="welcomeMsg">@string/welcomeMsg</item>
+        <item name="descriptionMsg">@string/descriptionMsg</item>
+        <item name="btnExplore">@string/btnExplore</item>
+        <item name="welcomeUser">@string/welcomeUser</item>
+        <item name="logo">@drawable/ic_logo</item>
+    </style>
+
+    <style name="Theme.App.Emerald" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/greenLight</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/greenVeryLight</item>
+        <item name="colorOnPrimaryContainer">@color/greenVeryDark</item>
+        <item name="colorPrimaryInverse">@color/greenDark</item>
+        <item name="colorSecondary">@color/teal1</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/greyPurpleLight</item>
+        <item name="colorOnSecondaryContainer">@color/greyPurpleDark</item>
+        <item name="colorTertiary">@color/roseDeep</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/roseLight</item>
+        <item name="colorOnTertiaryContainer">@color/roseDark</item>
+        <item name="android:colorBackground">@color/greyLight</item>
+        <item name="colorOnBackground">@color/greyVeryDark</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/charcoal</item>
+        <item name="colorSurfaceVariant">@color/greyBlueLight</item>
+        <item name="colorOnSurfaceVariant">@color/greyBlueDark</item>
+        <item name="colorSurfaceInverse">@color/greyCharcoal</item>
+        <item name="colorOnSurfaceInverse">@color/greyWhite</item>
+        <item name="colorError">@color/redDark</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/redLight</item>
+        <item name="colorOnErrorContainer">@color/redVeryDark</item>
+        <item name="colorOutline">@color/greyMedium</item>
+        <item name="colorOutlineVariant">@color/greyBlueMedium</item>
+        <item name="warning">@color/orangeDark</item>
+        <item name="promoBrand">@color/orangeDark</item>
+        <item name="statusPending">@color/yellow</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.Emerald.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.Emerald.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.App.Emerald.Large</item>
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.App.Emerald.DisplayLarge
+        </item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.App.Emerald.DisplayMedium
+        </item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.App.Emerald.DisplaySmall
+        </item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.App.Emerald.HeadlineLarge
+        </item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.App.Emerald.HeadlineMedium
+        </item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.App.Emerald.HeadlineSmall
+        </item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.App.Emerald.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.App.Emerald.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.App.Emerald.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.App.Emerald.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.App.Emerald.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.App.Emerald.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.App.Emerald.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.App.Emerald.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.App.Emerald.LabelSmall</item>
+        <item name="appTitle">@string/appTitle</item>
+        <item name="welcomeMsg">@string/welcomeEmeraldMsg</item>
+        <item name="descriptionMsg">@string/descriptionMsg</item>
+        <item name="btnExplore">@string/btnExplore</item>
+        <item name="welcomeUser">@string/welcomeUser</item>
+        <item name="logo">@drawable/ic_logo</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Global.ExtraSmall" parent="ShapeAppearance.Material3.Corner.ExtraSmall">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">4.0dp</item>
+        <item name="cornerSizeTopRight">4.0dp</item>
+        <item name="cornerSizeBottomRight">4.0dp</item>
+        <item name="cornerSizeBottomLeft">4.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Global.Small" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">8.0dp</item>
+        <item name="cornerSizeTopRight">8.0dp</item>
+        <item name="cornerSizeBottomRight">8.0dp</item>
+        <item name="cornerSizeBottomLeft">8.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Global.Medium" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">12.0dp</item>
+        <item name="cornerSizeTopRight">12.0dp</item>
+        <item name="cornerSizeBottomRight">12.0dp</item>
+        <item name="cornerSizeBottomLeft">12.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Global.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16.0dp</item>
+        <item name="cornerSizeTopRight">16.0dp</item>
+        <item name="cornerSizeBottomRight">16.0dp</item>
+        <item name="cornerSizeBottomLeft">16.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Global.ExtraLarge" parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">28.0dp</item>
+        <item name="cornerSizeTopRight">28.0dp</item>
+        <item name="cornerSizeBottomRight">28.0dp</item>
+        <item name="cornerSizeBottomLeft">28.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Emerald.ExtraSmall" parent="ShapeAppearance.Material3.Corner.ExtraSmall">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">6.0dp</item>
+        <item name="cornerSizeTopRight">6.0dp</item>
+        <item name="cornerSizeBottomRight">6.0dp</item>
+        <item name="cornerSizeBottomLeft">6.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Emerald.Small" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">10.0dp</item>
+        <item name="cornerSizeTopRight">10.0dp</item>
+        <item name="cornerSizeBottomRight">10.0dp</item>
+        <item name="cornerSizeBottomLeft">10.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Emerald.Medium" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">14.0dp</item>
+        <item name="cornerSizeTopRight">14.0dp</item>
+        <item name="cornerSizeBottomRight">14.0dp</item>
+        <item name="cornerSizeBottomLeft">14.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Emerald.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">20.0dp</item>
+        <item name="cornerSizeTopRight">20.0dp</item>
+        <item name="cornerSizeBottomRight">20.0dp</item>
+        <item name="cornerSizeBottomLeft">20.0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Emerald.ExtraLarge" parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">32.0dp</item>
+        <item name="cornerSizeTopRight">32.0dp</item>
+        <item name="cornerSizeBottomRight">32.0dp</item>
+        <item name="cornerSizeBottomLeft">32.0dp</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textSize">@dimen/globalDisplayLargeFontSize</item>
+        <item name="lineHeight">@dimen/globalDisplayLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="android:textSize">@dimen/globalDisplayMediumFontSize</item>
+        <item name="lineHeight">@dimen/globalDisplayMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textSize">@dimen/globalDisplaySmallFontSize</item>
+        <item name="lineHeight">@dimen/globalDisplaySmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">@dimen/globalHeadlineLargeFontSize</item>
+        <item name="lineHeight">@dimen/globalHeadlineLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">@dimen/globalHeadlineMediumFontSize</item>
+        <item name="lineHeight">@dimen/globalHeadlineMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">@dimen/globalHeadlineSmallFontSize</item>
+        <item name="lineHeight">@dimen/globalHeadlineSmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/globalTitleLargeFontSize</item>
+        <item name="lineHeight">@dimen/globalTitleLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/globalTitleMediumFontSize</item>
+        <item name="lineHeight">@dimen/globalTitleMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">@dimen/globalTitleSmallFontSize</item>
+        <item name="lineHeight">@dimen/globalTitleSmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/globalBodyLargeFontSize</item>
+        <item name="lineHeight">@dimen/globalBodyLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/globalBodyMediumFontSize</item>
+        <item name="lineHeight">@dimen/globalBodyMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">@dimen/globalBodySmallFontSize</item>
+        <item name="lineHeight">@dimen/globalBodySmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">@dimen/globalLabelLargeFontSize</item>
+        <item name="lineHeight">@dimen/globalLabelLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">@dimen/globalLabelMediumFontSize</item>
+        <item name="lineHeight">@dimen/globalLabelMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Global.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">@dimen/globalLabelSmallFontSize</item>
+        <item name="lineHeight">@dimen/globalLabelSmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textSize">@dimen/emeraldDisplayLargeFontSize</item>
+        <item name="lineHeight">@dimen/emeraldDisplayLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="android:textSize">@dimen/emeraldDisplayMediumFontSize</item>
+        <item name="lineHeight">@dimen/emeraldDisplayMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textSize">@dimen/emeraldDisplaySmallFontSize</item>
+        <item name="lineHeight">@dimen/emeraldDisplaySmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">@dimen/emeraldHeadlineLargeFontSize</item>
+        <item name="lineHeight">@dimen/emeraldHeadlineLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">@dimen/emeraldHeadlineMediumFontSize</item>
+        <item name="lineHeight">@dimen/emeraldHeadlineMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">@dimen/emeraldHeadlineSmallFontSize</item>
+        <item name="lineHeight">@dimen/emeraldHeadlineSmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/emeraldTitleLargeFontSize</item>
+        <item name="lineHeight">@dimen/emeraldTitleLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/emeraldTitleMediumFontSize</item>
+        <item name="lineHeight">@dimen/emeraldTitleMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">@dimen/emeraldTitleSmallFontSize</item>
+        <item name="lineHeight">@dimen/emeraldTitleSmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/emeraldBodyLargeFontSize</item>
+        <item name="lineHeight">@dimen/emeraldBodyLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/emeraldBodyMediumFontSize</item>
+        <item name="lineHeight">@dimen/emeraldBodyMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">@dimen/emeraldBodySmallFontSize</item>
+        <item name="lineHeight">@dimen/emeraldBodySmallLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">@dimen/emeraldLabelLargeFontSize</item>
+        <item name="lineHeight">@dimen/emeraldLabelLargeLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">@dimen/emeraldLabelMediumFontSize</item>
+        <item name="lineHeight">@dimen/emeraldLabelMediumLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.App.Emerald.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">@dimen/emeraldLabelSmallFontSize</item>
+        <item name="lineHeight">@dimen/emeraldLabelSmallLineHeight</item>
+    </style>
+</resources>

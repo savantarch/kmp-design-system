@@ -1,0 +1,6 @@
+"appTitle" = "Sistema de Diseño KMP";
+"welcomeMsg" = "Global Theme";
+"welcomeEmeraldMsg" = "Esmeralda Theme";
+"descriptionMsg" = "Un sistema de diseño multiplataforma construido con Kotlin Multiplatform.";
+"btnExplore" = "Explorar";
+"welcomeUser" = "¡Bienvenido de nuevo, %@!";

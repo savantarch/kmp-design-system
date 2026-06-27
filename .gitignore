@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+**/build/
+*.iml
+local.properties
+
+# Kotlin
+.kotlin/
+
+# IDE
+.idea/
+
+# iOS
+.build/
+*.xcodeproj
+*.xcworkspace
+*.xcuserdata
+*.xcuserdatad
+**/DerivedData/
+
+# macOS
+.DS_Store
+
+# Xcode / Swift Package Manager user-specific files
+**/xcuserdata/
+**/*.xcuserdatad/
+**/.swiftpm/xcode/
+**/*.xcshareddata/
+
