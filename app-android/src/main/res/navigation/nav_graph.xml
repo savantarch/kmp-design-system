@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/xml_fragment">
+
+    <fragment
+        android:id="@+id/xml_fragment"
+        android:name="com.savantarch.android.XmlFragment"
+        android:label="XML Views" />
+
+    <fragment
+        android:id="@+id/compose_fragment"
+        android:name="com.savantarch.android.ComposeFragment"
+        android:label="Compose" />
+
+    <fragment
+        android:id="@+id/cmp_fragment"
+        android:name="com.savantarch.android.CmpFragment"
+        android:label="CMP" />
+
+</navigation>

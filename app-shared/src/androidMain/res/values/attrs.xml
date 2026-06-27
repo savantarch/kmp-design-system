@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors -->
+    <attr name="warning" format="color" />
+    <attr name="promoBrand" format="color" />
+    <attr name="statusPending" format="color" />
+
+    <!-- Strings -->
+    <attr name="appTitle" format="reference|string" />
+    <attr name="welcomeMsg" format="reference|string" />
+    <attr name="descriptionMsg" format="reference|string" />
+    <attr name="btnExplore" format="reference|string" />
+    <attr name="welcomeUser" format="reference|string" />
+
+    <!-- Images -->
+    <attr name="logo" format="reference" />
+</resources>
