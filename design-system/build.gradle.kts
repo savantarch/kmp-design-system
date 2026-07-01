@@ -90,7 +90,13 @@ mavenPublishing {
     }
 
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-    signAllPublications()
+    
+    val hasSigningKey = !System.getenv("ORG_GRADLE_PROJECT_signingInMemoryKey").isNullOrEmpty() ||
+            project.hasProperty("signingInMemoryKey") ||
+            project.hasProperty("signing.keyId")
+    if (hasSigningKey) {
+        signAllPublications()
+    }
 }
 
 

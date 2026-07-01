@@ -6,7 +6,7 @@ plugins {
     id("org.jetbrains.compose")
     id("org.jetbrains.kotlin.plugin.compose")
     alias(libs.plugins.skie)
-    id("com.savantarch.designsystem")
+    alias(libs.plugins.savantarch.designsystem)
 }
 
 kotlin {
@@ -32,7 +32,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "Shared"
             isStatic = true
-            export(project(":design-system"))
+            export(libs.design.system)
             xcf.add(this)
             freeCompilerArgs = freeCompilerArgs + "-Xbinary=bundleId=com.savantarch.shared"
         }
@@ -40,7 +40,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(project(":design-system"))
+            api(libs.design.system)
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)

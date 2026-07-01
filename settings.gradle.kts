@@ -1,7 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 pluginManagement {
-    includeBuild("design-system-gradle-plugin")
     repositories {
         google {
             content {
@@ -27,7 +26,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "kmp-design-system"
 
-include(":design-system")
 include(":app-shared")
 include(":app-android")
-

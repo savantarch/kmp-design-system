@@ -32,7 +32,7 @@ android {
 
 dependencies {
     implementation(project(":app-shared"))
-    implementation(project(":design-system"))
+    implementation(libs.design.system)
     
     // Android UI Architecture dependencies
     implementation(libs.androidx.appcompat)

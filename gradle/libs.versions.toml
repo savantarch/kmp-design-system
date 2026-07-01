@@ -11,6 +11,7 @@ androidx-activity-compose = "1.13.0"
 skie = "0.10.12"
 vanniktech-publish = "0.28.0"
 gradle-publish = "1.3.0"
+design-system = "1.0.0-beta08"
 
 [libraries]
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
@@ -24,6 +25,7 @@ compose-foundation = { group = "org.jetbrains.compose.foundation", name = "found
 compose-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "compose-library" }
 compose-components-resources = { group = "org.jetbrains.compose.components", name = "components-resources", version.ref = "compose-library" }
 coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version = "3.0.4" }
+design-system = { group = "com.savantarch", name = "design-system", version.ref = "design-system" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -37,3 +39,4 @@ jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-plugi
 skie = { id = "co.touchlab.skie", version.ref = "skie" }
 vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-publish" }
 gradle-plugin-publish = { id = "com.gradle.plugin-publish", version.ref = "gradle-publish" }
+savantarch-designsystem = { id = "com.savantarch.designsystem", version.ref = "design-system" }
