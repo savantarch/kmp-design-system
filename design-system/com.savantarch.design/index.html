@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.savantarch.design</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    design-system
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.0.0-SNAPSHOT        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":design-system/androidMain">android</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true"
+                        data-filter=":design-system/commonMain">common</button>
+                <button class="platform-tag platform-selector native-like" data-active="" aria-pressed="true"
+                        data-filter=":design-system/iosMain">ios</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":design-system/androidMain"
+                                       data-filter=":design-system/androidMain"/>
+                                <span class="checkbox--icon"></span>
+                                android
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":design-system/commonMain"
+                                       data-filter=":design-system/commonMain"/>
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option native-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":design-system/iosMain"
+                                       data-filter=":design-system/iosMain"/>
+                                <span class="checkbox--icon"></span>
+                                ios
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    design-system
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="design-system::com.savantarch.design////PointingToDeclaration//-686307137">
+  <div class="breadcrumbs"><a href="../../index.html">design-system</a><span class="delimiter">/</span><span class="current">com.savantarch.design</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1227667264%2FClasslikes%2F386980387" anchor-label="AndroidDsImages" id="1227667264%2FClasslikes%2F386980387" data-filterable-set=":design-system/androidMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-ds-images/index.html"><span>Android</span><wbr></wbr><span>Ds</span><wbr></wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1227667264%2FClasslikes%2F386980387"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/androidMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-android-ds-images/index.html">AndroidDsImages</a> : <a href="-ds-images/index.html">DsImages</a></div><div class="brief "><p class="paragraph">Android-specific contract for design system image assets. Image keys generated or defined on Android must implement this interface to resolve to theme attributes.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-512225720%2FClasslikes%2F386980387" anchor-label="AndroidDsStrings" id="-512225720%2FClasslikes%2F386980387" data-filterable-set=":design-system/androidMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-ds-strings/index.html"><span>Android</span><wbr></wbr><span>Ds</span><wbr></wbr><span><span>Strings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-512225720%2FClasslikes%2F386980387"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/androidMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-android-ds-strings/index.html">AndroidDsStrings</a> : <a href="-ds-strings/index.html">DsStrings</a></div><div class="brief "><p class="paragraph">Android-specific contract for design system string assets. String keys generated or defined on Android must implement this interface to resolve to theme attributes.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1161663341%2FClasslikes%2F-1230335785" anchor-label="CornerFamily" id="-1161663341%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-corner-family/index.html"><span>Corner</span><wbr></wbr><span><span>Family</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1161663341%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-corner-family/index.html">CornerFamily</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-corner-family/index.html">CornerFamily</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Defines the style family of a corner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="732312589%2FClasslikes%2F-1230335785" anchor-label="DsColors" id="732312589%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ds-colors/index.html"><span>Ds</span><wbr></wbr><span><span>Colors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="732312589%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ds-colors/index.html">DsColors</a></div><div class="brief "><p class="paragraph">Core design system color interface containing the standard set of Material 3 color properties. Implementing enums or classes provide ARGB hex values as <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a>s (e.g. <code class="lang-kotlin">0xFF6200EE</code>).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1907140613%2FClasslikes%2F-1230335785" anchor-label="DsImages" id="1907140613%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ds-images/index.html"><span>Ds</span><wbr></wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1907140613%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ds-images/index.html">DsImages</a></div><div class="brief "><p class="paragraph">Interface for application graphics assets/images. Client enum keys should implement this interface.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1229036853%2FClasslikes%2F-1230335785" anchor-label="DsShapes" id="-1229036853%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ds-shapes/index.html"><span>Ds</span><wbr></wbr><span><span>Shapes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1229036853%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ds-shapes/index.html">DsShapes</a></div><div class="brief "><p class="paragraph">Core design system shapes interface containing the standard Material 3 corner scale.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-923388381%2FClasslikes%2F-1230335785" anchor-label="DsStrings" id="-923388381%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ds-strings/index.html"><span>Ds</span><wbr></wbr><span><span>Strings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-923388381%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ds-strings/index.html">DsStrings</a></div><div class="brief "><p class="paragraph">Interface for application localized string keys. Client enum keys should implement this interface.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="413520857%2FClasslikes%2F-1230335785" anchor-label="DsThemeMode" id="413520857%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ds-theme-mode/index.html"><span>Ds</span><wbr></wbr><span>Theme</span><wbr></wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="413520857%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-ds-theme-mode/index.html">DsThemeMode</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-ds-theme-mode/index.html">DsThemeMode</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Defines the application's supported theme mode choices.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2143298770%2FClasslikes%2F-1230335785" anchor-label="DsTypography" id="-2143298770%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ds-typography/index.html"><span>Ds</span><wbr></wbr><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2143298770%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ds-typography/index.html">DsTypography</a></div><div class="brief "><p class="paragraph">Core design system typography interface containing the standard Material 3 text style tokens.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1851675810%2FClasslikes%2F-1230335785" anchor-label="FontSpec" id="1851675810%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-font-spec/index.html"><span>Font</span><wbr></wbr><span><span>Spec</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1851675810%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-font-spec/index.html">FontSpec</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lineHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A platform-agnostic text style/font token declaring target font size and line height. These are compiled to standard Android text appearances and Apple system fonts.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="87501794%2FClasslikes%2F1723743187" anchor-label="IosDsImages" id="87501794%2FClasslikes%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ios-ds-images/index.html"><span>Ios</span><wbr></wbr><span>Ds</span><wbr></wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="87501794%2FClasslikes%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ios-ds-images/index.html">IosDsImages</a> : <a href="-ds-images/index.html#1907140613%2FMain%2F1723743187">DsImages</a></div><div class="brief "><p class="paragraph">iOS-specific contract for design system image assets. Image keys generated or defined on iOS must implement this interface to resolve to bundle asset names.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1497616922%2FClasslikes%2F1723743187" anchor-label="IosDsStrings" id="-1497616922%2FClasslikes%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ios-ds-strings/index.html"><span>Ios</span><wbr></wbr><span>Ds</span><wbr></wbr><span><span>Strings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1497616922%2FClasslikes%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ios-ds-strings/index.html">IosDsStrings</a> : <a href="-ds-strings/index.html#-923388381%2FMain%2F1723743187">DsStrings</a></div><div class="brief "><p class="paragraph">iOS-specific contract for design system string assets. String keys generated or defined on iOS must implement this interface to resolve to bundle localization keys.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-638132559%2FClasslikes%2F-1230335785" anchor-label="ShapeAppearance" id="-638132559%2FClasslikes%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-shape-appearance/index.html"><span>Shape</span><wbr></wbr><span><span>Appearance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-638132559%2FClasslikes%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-shape-appearance/index.html">ShapeAppearance</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>family<span class="token operator">: </span><a href="-corner-family/index.html">CornerFamily</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topLeft<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topRight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bottomRight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bottomLeft<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A platform-agnostic shape appearance specification declaring corner family and corner sizes. These are compiled to standard Android shapes and Apple corner radii.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="950908513%2FProperties%2F1723743187" anchor-label="bodyLargeFont" id="950908513%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="body-large-font.html"><span>body</span><wbr></wbr><span>Large</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="950908513%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="body-large-font.html">bodyLargeFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-281904497%2FProperties%2F1723743187" anchor-label="bodyMediumFont" id="-281904497%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="body-medium-font.html"><span>body</span><wbr></wbr><span>Medium</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-281904497%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="body-medium-font.html">bodyMediumFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1191324907%2FProperties%2F1723743187" anchor-label="bodySmallFont" id="-1191324907%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="body-small-font.html"><span>body</span><wbr></wbr><span>Small</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1191324907%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="body-small-font.html">bodySmallFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="173617389%2FProperties%2F1723743187" anchor-label="displayLargeFont" id="173617389%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="display-large-font.html"><span>display</span><wbr></wbr><span>Large</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="173617389%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="display-large-font.html">displayLargeFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1391874435%2FProperties%2F1723743187" anchor-label="displayMediumFont" id="1391874435%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="display-medium-font.html"><span>display</span><wbr></wbr><span>Medium</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1391874435%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="display-medium-font.html">displayMediumFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1968616031%2FProperties%2F1723743187" anchor-label="displaySmallFont" id="-1968616031%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="display-small-font.html"><span>display</span><wbr></wbr><span>Small</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1968616031%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="display-small-font.html">displaySmallFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1369566355%2FProperties%2F1723743187" anchor-label="headlineLargeFont" id="1369566355%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="headline-large-font.html"><span>headline</span><wbr></wbr><span>Large</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1369566355%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="headline-large-font.html">headlineLargeFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-188413283%2FProperties%2F1723743187" anchor-label="headlineMediumFont" id="-188413283%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="headline-medium-font.html"><span>headline</span><wbr></wbr><span>Medium</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-188413283%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="headline-medium-font.html">headlineMediumFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-772667065%2FProperties%2F1723743187" anchor-label="headlineSmallFont" id="-772667065%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="headline-small-font.html"><span>headline</span><wbr></wbr><span>Small</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-772667065%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="headline-small-font.html">headlineSmallFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1153305503%2FProperties%2F1723743187" anchor-label="labelLargeFont" id="1153305503%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="label-large-font.html"><span>label</span><wbr></wbr><span>Large</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1153305503%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="label-large-font.html">labelLargeFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1697434897%2FProperties%2F1723743187" anchor-label="labelMediumFont" id="1697434897%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="label-medium-font.html"><span>label</span><wbr></wbr><span>Medium</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1697434897%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="label-medium-font.html">labelMediumFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-988927917%2FProperties%2F1723743187" anchor-label="labelSmallFont" id="-988927917%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="label-small-font.html"><span>label</span><wbr></wbr><span>Small</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-988927917%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="label-small-font.html">labelSmallFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-353957697%2FProperties%2F1723743187" anchor-label="localized" id="-353957697%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="localized.html"><span><span>localized</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-353957697%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-strings/index.html#-923388381%2FMain%2F1723743187">DsStrings</a><span class="token punctuation">.</span><a href="localized.html">localized</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Resolves and loads the localized string value for this <a href="-ds-strings/index.html#-923388381%2FMain%2F1723743187">DsStrings</a> directly on iOS.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2104311043%2FProperties%2F1723743187" anchor-label="titleLargeFont" id="2104311043%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title-large-font.html"><span>title</span><wbr></wbr><span>Large</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2104311043%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="title-large-font.html">titleLargeFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1113835565%2FProperties%2F1723743187" anchor-label="titleMediumFont" id="1113835565%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title-medium-font.html"><span>title</span><wbr></wbr><span>Medium</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1113835565%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="title-medium-font.html">titleMediumFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-37922377%2FProperties%2F1723743187" anchor-label="titleSmallFont" id="-37922377%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title-small-font.html"><span>title</span><wbr></wbr><span>Small</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-37922377%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-typography/index.html#-2143298770%2FMain%2F1723743187">DsTypography</a><span class="token punctuation">.</span><a href="title-small-font.html">titleSmallFont</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="395119307%2FProperties%2F1723743187" anchor-label="uiImage" id="395119307%2FProperties%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ui-image.html"><span>ui</span><wbr></wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="395119307%2FProperties%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ds-images/index.html#1907140613%2FMain%2F1723743187">DsImages</a><span class="token punctuation">.</span><a href="ui-image.html">uiImage</a><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIImage///PointingToDeclaration/">UIImage</span></div><div class="brief "><p class="paragraph">Resolves and loads this <a href="-ds-images/index.html#1907140613%2FMain%2F1723743187">DsImages</a> key to a native iOS <span data-unresolved-link="platform.UIKit/UIImage///PointingToDeclaration/">UIImage</span> instance from our bundle.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="71076567%2FFunctions%2F-686307137" anchor-label="DsImage" id="71076567%2FFunctions%2F-686307137" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ds-image.html"><span>Ds</span><wbr></wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="71076567%2FFunctions%2F-686307137"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain" data-toggle=":design-system/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":design-system/androidMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-ds-image.html"><span class="token function">DsImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="-ds-images/index.html">DsImages</a><span class="token punctuation">, </span></span><span class="parameter ">contentDescription<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui/Modifier///PointingToDeclaration/">Modifier</span><span class="token punctuation">, </span></span><span class="parameter ">tint<span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui.graphics/Color///PointingToDeclaration/">Color</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">backgroundColor<span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui.graphics/Color///PointingToDeclaration/">Color</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Composable function to display a synchronous vector/raster image across Android and iOS.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":design-system/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="-ds-image.html"><span class="token function">DsImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="-ds-images/index.html">DsImages</a><span class="token punctuation">, </span></span><span class="parameter ">contentDescription<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui/Modifier///PointingToDeclaration/">Modifier</span><span class="token operator"> = </span>Modifier<span class="token punctuation">, </span></span><span class="parameter ">tint<span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui.graphics/Color///PointingToDeclaration/">Color</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">backgroundColor<span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui.graphics/Color///PointingToDeclaration/">Color</span><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Composable function to display a synchronous vector/raster image across Android and iOS.</p></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-ds-image.html"><span class="token function">DsImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="-ds-images/index.html#1907140613%2FMain%2F1723743187">DsImages</a><span class="token punctuation">, </span></span><span class="parameter ">contentDescription<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span>ERROR CLASS: Symbol not found for Modifier<span class="token punctuation">, </span></span><span class="parameter ">tint<span class="token operator">: </span>ERROR CLASS: Symbol not found for androidx.compose.ui.graphics.Color?<span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">backgroundColor<span class="token operator">: </span>ERROR CLASS: Symbol not found for androidx.compose.ui.graphics.Color?<span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1728113904%2FFunctions%2F1723743187" anchor-label="formatWithArgs" id="-1728113904%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="format-with-args.html"><span>format</span><wbr></wbr><span>With</span><wbr></wbr><span><span>Args</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1728113904%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="format-with-args.html"><span class="token function">formatWithArgs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Extension function to format a Swift/Kotlin <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a> using Cocoa's <span data-unresolved-link="platform.Foundation/NSString///PointingToDeclaration/">NSString</span> engine.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="238273545%2FFunctions%2F1723743187" anchor-label="getDesignSystemBundle" id="238273545%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-design-system-bundle.html"><span>get</span><wbr></wbr><span>Design</span><wbr></wbr><span>System</span><wbr></wbr><span><span>Bundle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="238273545%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="platform.Foundation/NSBundle///PointingToDeclaration/">NSBundle</span><span class="token punctuation">.</span><a href="get-design-system-bundle.html"><span class="token function">getDesignSystemBundle</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.Foundation/NSBundle///PointingToDeclaration/">NSBundle</span></div><div class="brief "><p class="paragraph">Locates and returns the design system resource bundle (<code class="lang-kotlin">design-system.bundle</code>) within this bundle, falling back to the receiver bundle if not found.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-955748744%2FFunctions%2F386980387" anchor-label="getDrawableIdFromAttr" id="-955748744%2FFunctions%2F386980387" data-filterable-set=":design-system/androidMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-drawable-id-from-attr.html"><span>get</span><wbr></wbr><span>Drawable</span><wbr></wbr><span>Id</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Attr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-955748744%2FFunctions%2F386980387"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/androidMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="android.content/Context///PointingToDeclaration/">Context</span><span class="token punctuation">.</span><a href="get-drawable-id-from-attr.html"><span class="token function">getDrawableIdFromAttr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attr<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Resolves a theme-dependent drawable resource ID from the specified theme attribute.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="725653634%2FFunctions%2F386980387" anchor-label="getStringFromAttr" id="725653634%2FFunctions%2F386980387" data-filterable-set=":design-system/androidMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-string-from-attr.html"><span>get</span><wbr></wbr><span>String</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Attr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="725653634%2FFunctions%2F386980387"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/androidMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="android.content/Context///PointingToDeclaration/">Context</span><span class="token punctuation">.</span><a href="get-string-from-attr.html"><span class="token function">getStringFromAttr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attr<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Resolves a dynamic theme-dependent string resource ID from the specified theme attribute.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="android.content/Context///PointingToDeclaration/">Context</span><span class="token punctuation">.</span><a href="get-string-from-attr.html"><span class="token function">getStringFromAttr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attr<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>formatArgs<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Resolves a dynamic theme-dependent string resource ID from the specified theme attribute and formats it with the provided arguments.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1245854518%2FFunctions%2F-686307137" anchor-label="isPlatformInDarkTheme" id="1245854518%2FFunctions%2F-686307137" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-platform-in-dark-theme.html"><span>is</span><wbr></wbr><span>Platform</span><wbr></wbr><span>In</span><wbr></wbr><span>Dark</span><wbr></wbr><span><span>Theme</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1245854518%2FFunctions%2F-686307137"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain" data-toggle=":design-system/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="is-platform-in-dark-theme.html"><span class="token function">isPlatformInDarkTheme</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if the host operating system platform is currently configured in dark theme.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="is-platform-in-dark-theme.html"><span class="token function">isPlatformInDarkTheme</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if the host operating system platform is currently configured in dark theme.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="is-platform-in-dark-theme.html"><span class="token function">isPlatformInDarkTheme</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if the host operating system platform is currently configured in dark theme.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="706977975%2FFunctions%2F1723743187" anchor-label="loadImage" id="706977975%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-image.html"><span>load</span><wbr></wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="706977975%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="platform.Foundation/NSBundle///PointingToDeclaration/">NSBundle</span><span class="token punctuation">.</span><a href="load-image.html"><span class="token function">loadImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">imageName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">tintColor<span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIColor///PointingToDeclaration/">UIColor</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIImage///PointingToDeclaration/">UIImage</span></div><div class="brief "><p class="paragraph">Loads an image from this bundle by its name, configured with template or original rendering modes based on whether a tint color is specified.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-487755663%2FFunctions%2F1723743187" anchor-label="loadTemplateImage" id="-487755663%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-template-image.html"><span>load</span><wbr></wbr><span>Template</span><wbr></wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-487755663%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="platform.Foundation/NSBundle///PointingToDeclaration/">NSBundle</span><span class="token punctuation">.</span><a href="load-template-image.html"><span class="token function">loadTemplateImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">imageName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIImage///PointingToDeclaration/">UIImage</span></div><div class="brief "><p class="paragraph">Loads a template image from this bundle by its name, configured with template rendering mode to allow tinting filters.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1530799547%2FFunctions%2F1723743187" anchor-label="resolveImageFromBundle" id="-1530799547%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolve-image-from-bundle.html"><span>resolve</span><wbr></wbr><span>Image</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Bundle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1530799547%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="platform.Foundation/NSBundle///PointingToDeclaration/">NSBundle</span><span class="token punctuation">.</span><a href="resolve-image-from-bundle.html"><span class="token function">resolveImageFromBundle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">imageName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIImage///PointingToDeclaration/">UIImage</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Resolves a native iOS <span data-unresolved-link="platform.UIKit/UIImage///PointingToDeclaration/">UIImage</span> by its name from this bundle, falling back to the main application bundle.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-448938130%2FFunctions%2F-686307137" anchor-label="stringResource" id="-448938130%2FFunctions%2F-686307137" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="string-resource.html"><span>string</span><wbr></wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-448938130%2FFunctions%2F-686307137"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain" data-toggle=":design-system/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/androidMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dsStrings<span class="token operator">: </span><a href="-ds-strings/index.html">DsStrings</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Composable function to load a localized string synchronously.</p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dsStrings<span class="token operator">: </span><a href="-ds-strings/index.html">DsStrings</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>formatArgs<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Composable function to load a localized string synchronously and format it with arguments.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":design-system/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dsStrings<span class="token operator">: </span><a href="-ds-strings/index.html">DsStrings</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Composable function to load a localized string synchronously.</p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dsStrings<span class="token operator">: </span><a href="-ds-strings/index.html">DsStrings</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>formatArgs<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Composable function to load a localized string synchronously and format it with arguments.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dsStrings<span class="token operator">: </span><a href="-ds-strings/index.html#-923388381%2FMain%2F1723743187">DsStrings</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Composable function to load a localized string synchronously.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Loads a localized string synchronously from the design system bundle using the specified key.</p></div><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dsStrings<span class="token operator">: </span><a href="-ds-strings/index.html#-923388381%2FMain%2F1723743187">DsStrings</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>formatArgs<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Composable function to load a localized string synchronously and format it with arguments.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="string-resource.html"><span class="token function">stringResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>formatArgs<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Loads a localized string synchronously from the design system bundle using the specified key and formats it with the provided arguments.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2147322768%2FFunctions%2F1723743187" anchor-label="toCGFloat" id="2147322768%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-c-g-float.html"><span>to</span><wbr></wbr><span><span>CGFloat</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2147322768%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">.</span><a href="to-c-g-float.html"><span class="token function">toCGFloat</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.CoreGraphics/CGFloat///PointingToDeclaration/">CGFloat</span></div><div class="brief "><p class="paragraph">Converts this <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a> value to a platform-native <span data-unresolved-link="platform.CoreGraphics/CGFloat///PointingToDeclaration/">CGFloat</span>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="404659283%2FFunctions%2F-686307137" anchor-label="toCoilModel" id="404659283%2FFunctions%2F-686307137" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain" data-filterable-set=":design-system/androidMain,:design-system/iosMain,:design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-coil-model.html"><span>to</span><wbr></wbr><span>Coil</span><wbr></wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="404659283%2FFunctions%2F-686307137"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/androidMain" data-filterable-set=":design-system/androidMain" data-active="" data-toggle=":design-system/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain" data-toggle=":design-system/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/androidMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-ds-images/index.html">DsImages</a><span class="token punctuation">.</span><a href="to-coil-model.html"><span class="token function">toCoilModel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></div><div class="brief "><p class="paragraph">Resolves the <a href="-ds-images/index.html">DsImages</a> asset to a platform-specific model suitable for third-party image loading libraries (such as Coil, Kamel, etc.) without introducing direct library dependencies into the design system.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":design-system/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="androidx.compose.runtime/Composable///PointingToDeclaration/"><span class="token annotation builtin">Composable</span></span></div></div><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="-ds-images/index.html">DsImages</a><span class="token punctuation">.</span><a href="to-coil-model.html"><span class="token function">toCoilModel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></div><div class="brief "><p class="paragraph">Resolves the <a href="-ds-images/index.html">DsImages</a> asset to a platform-specific model suitable for third-party image loading libraries (such as Coil, Kamel, etc.) without introducing direct library dependencies into the design system.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-ds-images/index.html#1907140613%2FMain%2F1723743187">DsImages</a><span class="token punctuation">.</span><a href="to-coil-model.html"><span class="token function">toCoilModel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></div><div class="brief "><p class="paragraph">Resolves the <a href="-ds-images/index.html#1907140613%2FMain%2F1723743187">DsImages</a> asset to a platform-specific model suitable for third-party image loading libraries (such as Coil, Kamel, etc.) without introducing direct library dependencies into the design system.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1453380186%2FFunctions%2F-1230335785" anchor-label="toColor" id="-1453380186%2FFunctions%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-color.html"><span>to</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1453380186%2FFunctions%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">.</span><a href="to-color.html"><span class="token function">toColor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui.graphics/Color///PointingToDeclaration/">Color</span></div><div class="brief "><p class="paragraph">Converts an ARGB hex <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a> (e.g. <code class="lang-kotlin">0xFFFFFFFF</code>) directly to a Compose <span data-unresolved-link="androidx.compose.ui.graphics/Color///PointingToDeclaration/">Color</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1738077634%2FFunctions%2F-1230335785" anchor-label="toColorScheme" id="1738077634%2FFunctions%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-color-scheme.html"><span>to</span><wbr></wbr><span>Color</span><wbr></wbr><span><span>Scheme</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1738077634%2FFunctions%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-ds-colors/index.html">DsColors</a><span class="token punctuation">.</span><a href="to-color-scheme.html"><span class="token function">toColorScheme</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isDark<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.compose.material3/ColorScheme///PointingToDeclaration/">ColorScheme</span></div><div class="brief "><p class="paragraph">Maps this <a href="-ds-colors/index.html">DsColors</a> definition to a Jetpack Compose Material 3 <span data-unresolved-link="androidx.compose.material3/ColorScheme///PointingToDeclaration/">ColorScheme</span> instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="346979412%2FFunctions%2F-1230335785" anchor-label="toComposeShape" id="346979412%2FFunctions%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-compose-shape.html"><span>to</span><wbr></wbr><span>Compose</span><wbr></wbr><span><span>Shape</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="346979412%2FFunctions%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-shape-appearance/index.html">ShapeAppearance</a><span class="token punctuation">.</span><a href="to-compose-shape.html"><span class="token function">toComposeShape</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.compose.foundation.shape/CornerBasedShape///PointingToDeclaration/">CornerBasedShape</span></div><div class="brief "><p class="paragraph">Converts this <a href="-shape-appearance/index.html">ShapeAppearance</a> into a Compose <span data-unresolved-link="androidx.compose.foundation.shape/CornerBasedShape///PointingToDeclaration/">CornerBasedShape</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1902916533%2FFunctions%2F-1230335785" anchor-label="toShapes" id="-1902916533%2FFunctions%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-shapes.html"><span>to</span><wbr></wbr><span><span>Shapes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1902916533%2FFunctions%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-ds-shapes/index.html">DsShapes</a><span class="token punctuation">.</span><a href="to-shapes.html"><span class="token function">toShapes</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.compose.material3/Shapes///PointingToDeclaration/">Shapes</span></div><div class="brief "><p class="paragraph">Maps this <a href="-ds-shapes/index.html">DsShapes</a> definition to a Jetpack Compose Material 3 <span data-unresolved-link="androidx.compose.material3/Shapes///PointingToDeclaration/">Shapes</span> instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1378924718%2FFunctions%2F-1230335785" anchor-label="toTextStyle" id="1378924718%2FFunctions%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-text-style.html"><span>to</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1378924718%2FFunctions%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-font-spec/index.html">FontSpec</a><span class="token punctuation">.</span><a href="to-text-style.html"><span class="token function">toTextStyle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fontWeight<span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui.text.font/FontWeight///PointingToDeclaration/">FontWeight</span><span class="token operator"> = </span>FontWeight.Normal</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.compose.ui.text/TextStyle///PointingToDeclaration/">TextStyle</span></div><div class="brief "><p class="paragraph">Converts this <a href="-font-spec/index.html">FontSpec</a> into a Compose <span data-unresolved-link="androidx.compose.ui.text/TextStyle///PointingToDeclaration/">TextStyle</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1663342635%2FFunctions%2F-1230335785" anchor-label="toTypography" id="1663342635%2FFunctions%2F-1230335785" data-filterable-set=":design-system/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/commonMain" data-filterable-set=":design-system/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-typography.html"><span>to</span><wbr></wbr><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1663342635%2FFunctions%2F-1230335785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-ds-typography/index.html">DsTypography</a><span class="token punctuation">.</span><a href="to-typography.html"><span class="token function">toTypography</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="androidx.compose.material3/Typography///PointingToDeclaration/">Typography</span></div><div class="brief "><p class="paragraph">Maps this <a href="-ds-typography/index.html">DsTypography</a> definition to a Jetpack Compose Material 3 <span data-unresolved-link="androidx.compose.material3/Typography///PointingToDeclaration/">androidx.compose.material3.Typography</span> instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1703323346%2FFunctions%2F1723743187" anchor-label="toUIColor" id="1703323346%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-u-i-color.html"><span>to</span><wbr></wbr><span><span>UIColor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1703323346%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">.</span><a href="to-u-i-color.html"><span class="token function">toUIColor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIColor///PointingToDeclaration/">UIColor</span></div><div class="brief "><p class="paragraph">Converts an ARGB hex <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a> (e.g. <code class="lang-kotlin">0xFF6200EE</code>) to a native iOS <span data-unresolved-link="platform.UIKit/UIColor///PointingToDeclaration/">UIColor</span>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1426927030%2FFunctions%2F1723743187" anchor-label="toUiColor" id="1426927030%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-ui-color.html"><span>to</span><wbr></wbr><span>Ui</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1426927030%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span>ERROR CLASS: Symbol not found for androidx.compose.ui.graphics.Color<span class="token punctuation">.</span><a href="to-ui-color.html"><span class="token function">toUiColor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIColor///PointingToDeclaration/">UIColor</span></div><div class="brief "><p class="paragraph">Converts a Compose Multiplatform androidx.compose.ui.graphics.Color to a native iOS <span data-unresolved-link="platform.UIKit/UIColor///PointingToDeclaration/">UIColor</span>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="680697480%2FFunctions%2F1723743187" anchor-label="toUIFont" id="680697480%2FFunctions%2F1723743187" data-filterable-set=":design-system/iosMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-u-i-font.html"><span>to</span><wbr></wbr><span><span>UIFont</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="680697480%2FFunctions%2F1723743187"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":design-system/iosMain" data-filterable-set=":design-system/iosMain" data-active="" data-toggle=":design-system/iosMain">ios</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":design-system/iosMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-font-spec/index.html#1851675810%2FMain%2F1723743187">FontSpec</a><span class="token punctuation">.</span><a href="to-u-i-font.html"><span class="token function">toUIFont</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isBold<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span></div><div class="brief "><p class="paragraph">Converts this platform-agnostic <a href="-font-spec/index.html#1851675810%2FMain%2F1723743187">FontSpec</a> into a native iOS <span data-unresolved-link="platform.UIKit/UIFont///PointingToDeclaration/">UIFont</span>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
